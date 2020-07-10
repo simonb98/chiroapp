@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +14,9 @@ import { PostComponent } from './post/post.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
