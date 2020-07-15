@@ -11,6 +11,11 @@ import { PostDataService } from '../post-data.service';
 export class PostListComponent{
 
   constructor(private _postDataService: PostDataService) { }
+  public filterPostGroup: string;
+
+  applyFilter(filter:string){
+    this.filterPostGroup = filter;
+  }
 
   ngOnInit(): void {
   }
