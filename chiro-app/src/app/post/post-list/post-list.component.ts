@@ -1,6 +1,7 @@
 import { POSTS } from '../mock-posts';
 import { Component } from '@angular/core';
 import { Post } from '../post.model';
+import { PostDataService } from '../post-data.service';
 
 @Component({
   selector: 'app-post-list',
@@ -8,19 +9,18 @@ import { Post } from '../post.model';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent{
-  private _posts = POSTS;
 
-  constructor() { }
+  constructor(private _postDataService: PostDataService) { }
 
   ngOnInit(): void {
   }
 
   get posts() {
-    return this._posts;
+    return this._postDataService.posts;
   }
 
   addNewPost(post: Post){
-    this._posts.push(post);
+    this._postDataService.addNewPost(post);
   }
 
 }
