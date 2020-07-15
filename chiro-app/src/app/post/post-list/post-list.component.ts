@@ -1,5 +1,6 @@
 import { POSTS } from '../mock-posts';
 import { Component } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-post-list',
@@ -16,6 +17,10 @@ export class PostListComponent{
 
   get posts() {
     return this._posts;
+  }
+
+  addNewPost(post: Post){
+    this._posts.push(post);
   }
 
 }

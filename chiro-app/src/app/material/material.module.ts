@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -17,8 +19,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -26,8 +30,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
   ]
 })
 export class MaterialModule { }

@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-form-field>
+        <input matInput placeholder="Titel" type="text" #newposttitle />
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput placeholder="Bericht" type="text" #newpostcontent></textarea>
+    </mat-form-field>
+    <button (click)="addPost(newposttitle, newpostcontent)" mat-raised-button>
+        Post
+    </button>
+</mat-card>
+
