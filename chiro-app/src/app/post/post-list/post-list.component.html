@@ -1,0 +1,5 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="start">
+  <div class="post" *ngFor="let localPost of posts" fxFlex="0 0 calc(25%-0.5%)" fxFlex.xs="100%">
+        <app-post [post]="localPost"></app-post>
+    </div>
+</div>

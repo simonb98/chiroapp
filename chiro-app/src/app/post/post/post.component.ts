@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Post } from '../post.model';
 
 @Component({
   selector: 'app-post',
@@ -6,12 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./post.component.scss']
 })
 export class PostComponent implements OnInit {
-  title: string;
-  group: string;
+  @Input() public post: Post;
 
-
-  constructor() { 
-    this.title = 'First Post';
+  constructor() {
   }
 
   ngOnInit(): void {
