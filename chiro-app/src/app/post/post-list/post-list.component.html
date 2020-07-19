@@ -2,11 +2,8 @@
   <app-add-post (newPost)="addNewPost($event)"></app-add-post>
   <mat-card>
     <mat-form-field>
-      <input matInput placeholder="filter" type="text" #filter />
+      <input matInput (keyup)='filterPost$.next($event.target.value)' placeholder="Filter" type="text" #filter />
     </mat-form-field>
-    <button (click)="applyFilter(filter.value)" mat-raised-button>
-      filter
-    </button>
   </mat-card>
   <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="start">
     <div class="post" *ngFor="let localPost of (posts | postFilter: filterPostGroup)" fxFlex="0 0 calc(25%-0.5%)" fxFlex.xs="100%">
